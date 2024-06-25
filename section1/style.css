@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+    --successColor:blue;
+    --failColor:red;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9fafb;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#containerBox{
+    background-color: #ffffff;
+    width: 400px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align: center;
+}
+
+.containerRegister{
+    padding: 7px 10px;
+}
+
+.containerRegister label{
+    display: block;
+    padding: 10px 0px;
+}
+
+.containerRegister input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f1f1f1;
+    font-size: 15px;
+}
+
+.containerRegister input:focus{
+    outline: 0;
+    border-color: #888;
+}
+
+.containerRegister .success input{
+    border-color: var(--successColor);
+}
+
+.containerRegister .fail input{
+    border-color: var(--failColor);
+    visibility: visible;
+}
+
+.containerRegister small{
+    display: block;
+    padding: 10px;
+}
+
+.containerRegister.success small{
+    visibility: hidden;
+}
+
+.containerRegister.fail small{
+    color: var(--failColor);
+}
+
+.containerBox button{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: var(--successColor);
+    border: 2px solid --successColor;
+    color: white;
+}
